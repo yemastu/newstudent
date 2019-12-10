@@ -1,0 +1,20 @@
+{
+  "name": "koaServer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-imagemin": "^6.2.0",
+    "http-errors": "^1.7.3",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^2.5.0",
+    "koa-router": "^7.4.0",
+    "mongoose": "^5.7.1"
+  }
+}
