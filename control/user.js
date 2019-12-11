@@ -1,4 +1,4 @@
-const { User } = require('../model');
+const { User, UserInfo } = require('../model');
 const jwt = require('jsonwebtoken');
 module.exports = {
   // 用户注册
@@ -65,11 +65,21 @@ module.exports = {
           expiresIn: '1h'
         })
       };
+      next();
     } catch (e) {
       ctx.body = {
         code: 400,
         msg: `登录失败，原因是${err}`
       };
     }
+  },
+  // 获取用户信息
+  getUserInfo: async (ctx, next) => {
+    let userid = ctx.request.query.id;
+    console.log(userid);
+    let userinfo = await UserInfo.findOne({ id: userid });
+    console.log(userinfo);
+    ctx.body = '123';
+    next();
   }
 };

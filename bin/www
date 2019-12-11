@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 const app = require('../app');
-const http = require('http');
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -19,10 +18,9 @@ function normalizePort(val) {
 console.log(process.env.PORT);
 const port = normalizePort(process.env.PORT || '3000');
 
-const server = http.createServer(app);
-server.listen(port);
-server.on('error', onError);
-server.on('listening', onListening);
+app.listen(port);
+app.on('error', onError);
+app.on('listening', onListening);
 /**
  * Event listener for HTTP server "error" event.
  */

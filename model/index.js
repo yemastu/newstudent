@@ -21,7 +21,23 @@ let userSchema = new Schema({
 });
 //用户模块
 const User = db.model('user', userSchema);
-
+let userInfo = new Schema({
+  info: String,
+  id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'user'
+  }
+});
+const UserInfo = db.model('userinfo', userInfo);
+// User.create({ username: 'lilei', password: '1123' }, function(err, doc) {
+//   let _id = doc._id;
+//   console.log('执行一次');
+//   UserInfo.create({
+//     info: '这是一条个人信息',
+//     userid: _id
+//   });
+// });
 module.exports = {
-  User
+  User,
+  UserInfo
 };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon bin/www",
+    "start": "nodemon  bin/www",
     "push": "bash deploy.sh"
   },
   "keywords": [],
@@ -21,6 +21,7 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
-    "mongoose": "^5.7.1"
+    "mongoose": "^5.7.1",
+    "pm2": "^4.2.1"
   }
 }
