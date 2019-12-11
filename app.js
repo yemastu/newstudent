@@ -17,6 +17,4 @@ app
   .use(user.routes())
   .use(file.routes());
 
-app.listen(8083, () => {
-  console.log('This server is running at http://localhost:' + 8083);
-});
+module.exports = app;
